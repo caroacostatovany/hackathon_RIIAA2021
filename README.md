@@ -12,8 +12,7 @@
 * Arturo Granados
 
 ## Descripión
-Este es un ejemplo de como deben de crear su repositorio.
-
+El objetivo de este proyecto es la extracción de texto importante de fichas digitalizadas originalmente producidas por la extinta Dirección Federal de Seguridad (DFS) de las cuales se pueden obtener palabras importantes como son: personas, organizaciones, lugares y fechas; esto con la finalidad de poder esclarecer la suerte de personas desaparecidas de manera forzada por el Estado mexicano entre los años 1964 y 1985.
 
 ## Pipeline
 1. Obtener los datos
@@ -28,5 +27,4 @@ Este es un ejemplo de como deben de crear su repositorio.
 Ejecutar el ipynb
 
 ## Notas
-Acerca de los [README](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-readmes)
 
