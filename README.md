@@ -2,11 +2,14 @@
 # Titulo de su proyecto
 
 **Nombre del equipo**  
-Equipo N
+<Inserte nombre>
 
 **Integrantes**
-* Alice
-* Bob
+* Carolina Acosta
+* Gerald García
+* Jesús Banda
+* Cuauhtémoc Bautista
+* Arturo Granados
 
 ## Descripión
 Este es un ejemplo de como deben de crear su repositorio.
@@ -14,7 +17,12 @@ Este es un ejemplo de como deben de crear su repositorio.
 
 ## Pipeline
 1. Obtener los datos
-2. Calcular tamaño de imagenes
+2. Preprocesamiento de las imágenes
+3. OCR en imágenes preprocesadas
+4. Limpieza de texto extraído
+5. Clasificación de palabras dentro del texto extraído
+6. Organización de palabras por su tipo
+7. Guardado de la infromación obtenida en formato CSV
 
 ## Cómo correr el código
 Ejecutar el ipynb
