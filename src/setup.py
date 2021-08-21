@@ -16,6 +16,6 @@ setup(name="busqueda_desaparecidos",
                           "nltk",
                           "regex",
                           "tesseract",
-                          "cv2"
+                          "opencv-python"
                           ],
       )
