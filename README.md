@@ -41,5 +41,7 @@ Ejecutar el ipynb
 Para linux:
 > sudo apt-get install libleptonica-dev tesseract-ocr libtesseract-dev
 
-## Referencias
+## Estructura del proyecto
 
+## Referencias
+- All Binarize module in src obtained from [Gallego 2019](https://github.com/ajgallego/document-image-binarization) 

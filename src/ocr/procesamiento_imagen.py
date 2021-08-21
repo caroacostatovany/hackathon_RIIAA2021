@@ -1,36 +1,35 @@
-# Generic Libraries
-from PIL import Image
-
-#Warnings
-import warnings
-warnings.filterwarnings("ignore")
-
 import cv2
-import pytesseract
-
-from src.utils.limpieza_texto import convierte_minusculas, quitar_caracteres_especiales, quitar_nonascii, quitar_stopwords
-
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-
-nltk.download('stopwords')
-nltk.download('punkt')
-
-# Leemos imagen
-path = "../datos/Fichas_manual/Ficheros_Represores_Lopez_Figueroa_Victorico_IMG_6646.JPG"
+import numpy as np
 
 
-class Ficha:
-    def __init__(self, path):
-        self.img = cv2.imread(path)
-        self.img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        self.height, self.width, self.channel = self.img.shape
+# Imagen en escala de grises
+def escala_grises(imagen):
+    return cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
 
-        self.text_extraido = pytesseract.image_to_string(self.img)
-        self.texto_limpio = ""
 
-    def limpiar_texto(self):
-        #self.texto_limpio = convierte_minusculas(self.text_extraido)
-        self.texto_limpio = quitar_caracteres_especiales(self.text_extraido)
-        self.texto_limpio = quitar_nonascii(self.texto_limpio)
-        self.texto_limpio = quitar_stopwords(self.texto_limpio)
+# Filtro para eliminar ruido
+def eliminar_ruido(imagen):
+    return cv2.medianBlur(imagen, 5)  # kernel de 5x5
+
+
+# Binarización de la imagen
+def binarizacion(imagen):
+    return cv2.threshold(imagen, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+
+
+# Operación de dilatación
+def dilatacion(imagen):
+    kernel = np.ones((5, 5), np.uint8)
+    return cv2.dilate(imagen, kernel, iterations=1)
+
+
+# Operación de erosión
+def erosion(imagen):
+    kernel = np.ones((5, 5), np.uint8)
+    return cv2.erode(imagen, kernel, iterations=1)
+
+
+# Método de apertura (erosión + dilatación)
+def apertura(imagen):
+    kernel = np.ones((5, 5), np.uint8)
+    return cv2.morphologyEx(imagen, cv2.MORPH_OPEN, kernel)
