@@ -30,7 +30,7 @@ class Ficha:
         self.texto_limpio = ""
 
     def limpiar_texto(self):
-        self.texto_limpio = convierte_minusculas(self.text_extraido)
-        self.texto_limpio = quitar_caracteres_especiales(self.texto_limpio)
+        #self.texto_limpio = convierte_minusculas(self.text_extraido)
+        self.texto_limpio = quitar_caracteres_especiales(self.text_extraido)
         self.texto_limpio = quitar_nonascii(self.texto_limpio)
         self.texto_limpio = quitar_stopwords(self.texto_limpio)
