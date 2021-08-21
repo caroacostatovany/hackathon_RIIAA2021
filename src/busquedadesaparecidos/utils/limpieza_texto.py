@@ -1,5 +1,5 @@
 import re
-from src.utils.constantes import STOPWORDS_PROPIOS
+from src.busquedadesaparecidos.utils.constantes import STOPWORDS_PROPIOS
 
 
 def convierte_minusculas(texto):

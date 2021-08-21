@@ -9,10 +9,10 @@ import warnings
 from keras import backend as K
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import src.binarize.util as util
-import src.binarize.utilFit as utilFit
-import src.binarize.utilDataGenerator as utilDataGenerator
-import src.binarize.utilModelREDNet as utilModelREDNet
+import src.busquedadesaparecidos.binarize.util as util
+import src.busquedadesaparecidos.binarize.utilFit as utilFit
+import src.busquedadesaparecidos.binarize.utilDataGenerator as utilDataGenerator
+import src.busquedadesaparecidos.binarize.utilModelREDNet as utilModelREDNet
 
 util.init()
 warnings.filterwarnings('ignore')
@@ -151,7 +151,7 @@ def save_images(autoencoder, args, test_folds):
 
         outFilename = fname.replace('_GR/', '_PR-' + args.modelpath + '/')
 
-        util.mkdirp( os.path.dirname(outFilename) )
+        util.mkdirp(os.path.dirname(outFilename))
 
         cv2.imwrite(outFilename, finalImg)
 
@@ -216,9 +216,9 @@ def define_weights_filename(config):
 def build_SAE_network(config, weights_filename):
     nb_layers = 5
     autoencoder, encoder, decoder = utilModelREDNet.build_REDNet(nb_layers,
-                                            config.window, config.nb_filters,
-                                            config.kernel, config.dropout,
-                                            config.stride, config.every)
+                                                                 config.window, config.nb_filters,
+                                                                 config.kernel, config.dropout,
+                                                                 config.stride, config.every)
 
     autoencoder.compile(optimizer='adam', loss=util.micro_fm, metrics=['mse'])
     print(autoencoder.summary())
@@ -249,7 +249,7 @@ def main(args=None):
     # Run data augmentation ?
     if args.aug == True:       # Add the augmented folders
         for f in list(train_folds):
-            train_folds.append( util.rreplace(f, '/', '/aug_', 1) )
+            train_folds.append(util.rreplace(f, '/', '/aug_', 1))
 
     array_test_files = util.load_array_of_files(args.path, test_folds)
     x_test, y_test = utilDataGenerator.generate_chunks(array_test_files, x_sufix, y_sufix, args.window, args.window)
@@ -292,7 +292,7 @@ def main(args=None):
     if args.test == False:
         args.monitor='min'
         best_th = utilFit.batch_fit_with_data_generator(autoencoder,
-                        train_data_generator, x_test, y_test, args, weights_filename)
+                                                        train_data_generator, x_test, y_test, args, weights_filename)
 
         # Re-Load last weights
         autoencoder.load_weights( weights_filename )

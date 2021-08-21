@@ -14,8 +14,8 @@ import cv2
 import pytesseract
 import numpy as np
 
-from src.utils.limpieza_texto import convierte_minusculas, quitar_caracteres_especiales, quitar_nonascii, quitar_stopwords
-from src.ocr.procesamiento_imagen import escala_grises, eliminar_ruido
+from src.busquedadesaparecidos.utils.limpieza_texto import convierte_minusculas, quitar_caracteres_especiales, quitar_nonascii, quitar_stopwords
+from src.busquedadesaparecidos.ocr.procesamiento_imagen import escala_grises, eliminar_ruido
 #from nltk.corpus import stopwords
 #from nltk.tokenize import word_tokenizer
 

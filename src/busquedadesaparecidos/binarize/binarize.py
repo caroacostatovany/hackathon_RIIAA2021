@@ -10,9 +10,9 @@ import numpy as np
 from keras import backend as K
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import src.binarize.util as util
-import src.binarize.utilDataGenerator as utilDataGenerator
-import src.binarize.utilModelREDNet as utilModelREDNet
+import src.busquedadesaparecidos.binarize.util as util
+import src.busquedadesaparecidos.binarize.utilDataGenerator as utilDataGenerator
+import src.busquedadesaparecidos.binarize.utilModelREDNet as utilModelREDNet
 
 util.init()
 warnings.filterwarnings('ignore')
@@ -59,9 +59,9 @@ def parse_menu(activate_demo_opt = False):
 def build_SAE_network(config):
     nb_layers = 5
     autoencoder, encoder, decoder = utilModelREDNet.build_REDNet(nb_layers,
-                                            config.window, config.nb_filters,
-                                            config.kernel, config.dropout,
-                                            config.stride, config.every)
+                                                                 config.window, config.nb_filters,
+                                                                 config.kernel, config.dropout,
+                                                                 config.stride, config.every)
 
     autoencoder.compile(optimizer='adam', loss=util.micro_fm, metrics=['mse'])
 
