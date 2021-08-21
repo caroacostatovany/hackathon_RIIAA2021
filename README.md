@@ -3,7 +3,7 @@
 # Titulo de su proyecto
 
 **Nombre del equipo**  
-###`<inserte nombre>`
+`<inserte nombre>`
 
 
 **Integrantes**
