@@ -13,7 +13,10 @@
 * Cuauhtémoc Bautista
 * Arturo Granados
 
-## Descripión
+## Problema
+
+
+## Descripción
 
 El objetivo de este proyecto es la creación de un multi-clasificador utilizando las fichas digitalizadas
 originalmente producidas por la extinta Dirección Federal de Seguridad (**DFS**); el cual será capaz de 
@@ -29,7 +32,14 @@ por el Estado Mexicano entre los años 1964 y 1985.
 Ejecutar el ipynb
 
 ## Notas
+### Requisitos en sistema:
 
+#### Versión python
+> python 3.7.4
+
+#### Otros:
+Para linux:
+> sudo apt-get install libleptonica-dev tesseract-ocr libtesseract-dev
 
 ## Referencias
 
