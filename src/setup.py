@@ -1,7 +1,7 @@
 #see: https://setuptools.readthedocs.io/en/latest/userguide/package_discovery.html
 from setuptools import setup, find_packages
 
-setup(name="busqueda_desaparecidos",
+setup(name="busquedadesaparecidos",
       version="0.1",
       description=u"Paquete que contiene preprocesamiento imagen, ocr, y clasificacion de entidades",
       url="",
