@@ -16,7 +16,7 @@ def quitar_caracteres_especiales(phrase):
     :param phrase:
     :return:
     """
-    caracteres_especiales = "’'?!,.():;-#\/°_"
+    caracteres_especiales = "’'?!,.():;#\/°_"
     # quita dobles espacios y lo hace 1
     phrase = re.sub(' +', ' ', phrase)
 
