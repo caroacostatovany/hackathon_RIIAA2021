@@ -9,10 +9,10 @@ import warnings
 from keras import backend as K
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import src.busquedadesaparecidos.binarize.util as util
-import src.busquedadesaparecidos.binarize.utilFit as utilFit
-import src.busquedadesaparecidos.binarize.utilDataGenerator as utilDataGenerator
-import src.busquedadesaparecidos.binarize.utilModelREDNet as utilModelREDNet
+import busquedadesaparecidos.binarize.util as util
+import busquedadesaparecidos.binarize.utilFit as utilFit
+import busquedadesaparecidos.binarize.utilDataGenerator as utilDataGenerator
+import busquedadesaparecidos.binarize.utilModelREDNet as utilModelREDNet
 
 util.init()
 warnings.filterwarnings('ignore')

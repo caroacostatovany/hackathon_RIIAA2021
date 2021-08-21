@@ -16,6 +16,7 @@ setup(name="busquedadesaparecidos",
                           "nltk",
                           "regex",
                           "tesseract",
+                          "pytesseract"
                           "opencv-python"
                           ],
       )
