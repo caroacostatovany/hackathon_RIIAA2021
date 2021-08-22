@@ -18,6 +18,6 @@ setup(name="busquedadesaparecidos",
                           "tesseract",
                           "pytesseract",
                           "opencv-python",
-                          "spacy"
+                          "spacy-nightly"
                           ],
       )
