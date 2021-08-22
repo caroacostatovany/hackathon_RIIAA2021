@@ -2,14 +2,13 @@ import re
 import pandas as pd
 
 def encontrar_expediente(texto):
+    exp = "No encontrado"
     x = re.search("xp[0-9,=,-]+", texto)
 
-    try:
-        x = x.group()
-    except:
-        x = "No encontrado"
+    if x is not None:
+        exp = x.group()
 
-    return x
+    return exp
 
 
 def convertir_texto_exp_dataframe(path, expediente, texto):
