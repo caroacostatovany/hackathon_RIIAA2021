@@ -5,8 +5,8 @@ download("es_core_news_lg")
 
 #import en_core_web_sm
 #nlp = en_core_web_sm.load()
-import es_core_news_sm
-nlp = es_core_news_sm.load()
+import es_core_news_lg
+nlp = es_core_news_lg.load()
 
 import pandas as pd
 
