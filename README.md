@@ -46,4 +46,4 @@ Para linux:
 ## Estructura del proyecto
 
 ## Referencias
-- All Binarize module in src obtained from [Gallego 2019](https://github.com/ajgallego/document-image-binarization) 
+- All Binarize module was obtained from [Gallego 2019](https://github.com/ajgallego/document-image-binarization) 

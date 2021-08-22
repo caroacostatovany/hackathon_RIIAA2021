@@ -1,0 +1,8 @@
+numpy
+pandas
+sphinx
+nltk
+regex
+tesseract
+pytesseract
+opencv-python

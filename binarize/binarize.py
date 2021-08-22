@@ -57,9 +57,9 @@ def parse_menu(activate_demo_opt = False):
 def build_SAE_network(config):
     nb_layers = 5
     autoencoder, encoder, decoder = utilModelREDNet.build_REDNet(nb_layers,
-                                                                 config.window, config.nb_filters,
-                                                                 config.kernel, config.dropout,
-                                                                 config.stride, config.every)
+                                            config.window, config.nb_filters,
+                                            config.kernel, config.dropout,
+                                            config.stride, config.every)
 
     autoencoder.compile(optimizer='adam', loss=util.micro_fm, metrics=['mse'])
 
@@ -167,6 +167,6 @@ def demo():
 
 
 # ----------------------------------------------------------------------------
-#if __name__ == "__main__":
-#    main(activate_demo_opt = '--demo' in sys.argv)
+if __name__ == "__main__":
+    main(activate_demo_opt = '--demo' in sys.argv)
 

@@ -42,7 +42,7 @@ class Ficha:
         img_elim_ruido = eliminar_ruido(gray_img)
         imagen_limpia = Image.fromarray(img_elim_ruido)
         imagen_limpia.save('tmp/out_test.JPG')
-        bashCommand = '/home/usr/.pyenv/versions/hackathon/bin/python3.7 ../src/busquedadesaparecidos/binarize/binarize.py -imgpath ./tmp/out_test.JPG -save out_test_2.JPG'
+        #bashCommand = '/home/usr/.pyenv/versions/hackathon/bin/python3.7 ../src/busquedadesaparecidos/binarize/binarize.py -imgpath ./tmp/out_test.JPG -save out_test_2.JPG'
 
         #process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
         #output, error = process.communicate()
