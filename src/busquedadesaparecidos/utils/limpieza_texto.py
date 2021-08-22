@@ -1,6 +1,7 @@
 import re
 from busquedadesaparecidos.utils.constantes import STOPWORDS_PROPIOS
 
+clases = ['organizacion', 'persona', 'lugar', 'fecha']
 
 def convierte_minusculas(texto):
     """Convierte a minúsculas todo el texto
@@ -51,3 +52,14 @@ def quitar_stopwords(texto):
     filtered_sentence = (" ").join(tokens_without_sw)
 
     return filtered_sentence
+
+
+def renombrar_clases_spacy(df):
+    df.loc[df['clase'] == 'ORG', 'clase'] = 'organizacion'
+    df.loc[df['clase'] == 'PER', 'clase'] = 'persona'
+    df.loc[df['clase'] == 'LOC', 'clase'] = 'lugar'
+    df.loc[df['clase'] == 'DATE', 'clase'] = 'fecha'
+    # Not in clases
+    df.loc[~df['clase'].isin(clases), 'clase'] = 'otro'
+
+    return df
