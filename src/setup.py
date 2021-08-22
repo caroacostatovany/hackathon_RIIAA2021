@@ -14,9 +14,10 @@ setup(name="busquedadesaparecidos",
                           "pandas",
                           "sphinx",
                           "nltk",
-                          "regex",
+                          "re",
                           "tesseract",
                           "pytesseract",
-                          "opencv-python"
+                          "opencv-python",
+                          "spacy"
                           ],
       )
