@@ -10,9 +10,7 @@ import numpy as np
 from keras import backend as K
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import busquedadesaparecidos.binarize.util as util
-import busquedadesaparecidos.binarize.utilDataGenerator as utilDataGenerator
-import busquedadesaparecidos.binarize.utilModelREDNet as utilModelREDNet
+import util, utilDataGenerator, utilModelREDNet
 
 util.init()
 warnings.filterwarnings('ignore')
@@ -169,6 +167,6 @@ def demo():
 
 
 # ----------------------------------------------------------------------------
-if __name__ == "__main__":
-    main(activate_demo_opt = '--demo' in sys.argv)
+#if __name__ == "__main__":
+#    main(activate_demo_opt = '--demo' in sys.argv)
 

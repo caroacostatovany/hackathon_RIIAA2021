@@ -40,6 +40,8 @@ Ejecutar el ipynb
 #### Otros:
 Para linux:
 > sudo apt-get install libleptonica-dev tesseract-ocr libtesseract-dev
+> sudo apt install python3-opencv
+> sudo apt install nvidia-cuda-toolkit
 
 ## Estructura del proyecto
 
