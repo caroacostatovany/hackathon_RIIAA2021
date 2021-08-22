@@ -1,5 +1,5 @@
 import re
-
+import pandas as pd
 
 def encontrar_expediente(texto):
     x = re.search("xp[0-9,=,-]+", texto)
