@@ -1,6 +1,15 @@
 import cv2
 import numpy as np
 
+import numpy as np
+from skimage.transform import hough_line, hough_line_peaks
+from skimage.transform import rotate
+from skimage.feature import canny
+from skimage.io import imread
+from skimage.color import rgb2gray
+import matplotlib.pyplot as plt
+from scipy.stats import mode
+
 
 # Imagen en escala de grises
 def escala_grises(imagen):
@@ -33,3 +42,25 @@ def erosion(imagen):
 def apertura(imagen):
     kernel = np.ones((5, 5), np.uint8)
     return cv2.morphologyEx(imagen, cv2.MORPH_OPEN, kernel)
+
+
+def skew_angle_hough_transform(image):
+    # convert to edges
+    edges = canny(image)
+    # Classic straight-line Hough transform between 0.1 - 180 degrees.
+    tested_angles = np.deg2rad(np.arange(0.1, 180.0))
+    h, theta, d = hough_line(edges, theta=tested_angles)
+
+    # find line peaks and angles
+    accum, angles, dists = hough_line_peaks(h, theta, d)
+
+    # round the angles to 2 decimal places and find the most common angle.
+    most_common_angle = mode(np.around(angles, decimals=2))[0]
+
+    # convert the angle to degree for rotation.
+    skew_angle = np.rad2deg(most_common_angle - np.pi / 2)
+    print(skew_angle)
+    return skew_angle
+
+
+

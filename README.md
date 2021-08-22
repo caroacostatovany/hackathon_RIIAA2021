@@ -13,9 +13,6 @@
 * Cuauhtémoc Bautista
 * Arturo Granados
 
-## Problema
-
-
 ## Descripción
 
 El objetivo de este proyecto es la creación de un multi-clasificador utilizando las fichas digitalizadas
@@ -29,7 +26,8 @@ por el Estado Mexicano entre los años 1964 y 1985.
 ![Pipeline](./imagenes/pipeline.png "Pipeline")
 
 ## Cómo correr el código
-Ejecutar el ipynb
+Ejecutar el notebook que se encuentra en el folder `notebooks`, llamado pipeline.ipynb. 
+Es recomendado utilizar [Google Colab](https://colab.research.google.com) para su ejecución.
 
 ## Notas
 ### Requisitos en sistema:
@@ -38,8 +36,7 @@ Ejecutar el ipynb
 > python 3.7.4
 
 #### Otros:
-Para linux:
-> sudo apt-get install libleptonica-dev tesseract-ocr libtesseract-dev
+> libleptonica-dev tesseract-ocr libtesseract-dev
 
 ## Estructura del proyecto
 
