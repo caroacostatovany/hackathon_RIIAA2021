@@ -1,6 +1,7 @@
 import spacy
 from spacy.cli import download
 download("es_core_news_sm")
+download("es_dep_news_trf")
 
 import en_core_web_sm
 nlp = en_core_web_sm.load()
