@@ -1,10 +1,12 @@
 import spacy
-spacy.download("es_core_news_sm")
+from spacy.cli import download
+download("es_core_news_sm")
 
 import en_core_web_sm
 nlp = en_core_web_sm.load()
 
 import pandas as pd
+
 
 def obtener_entidades(texto):
     doc = nlp(texto)
