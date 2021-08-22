@@ -2,12 +2,13 @@ import re
 
 
 def encontrar_expediente(texto):
-    x = re.search("xp[0-9,=,-]+", texto_limpio_minusculas)
-    return x
+    x = re.search("xp[0-9,=,-]+", texto)
+
+    return x.group()
 
 
 def convertir_texto_exp_dataframe(path, expediente, texto):
-    texto_exp = "{}| {}".format(x.group(), texto_limpio_minusculas.replace(x.group(), ''))
+    texto_exp = "{}| {}".format(expediente, texto.replace(expediente, ''))
     df = pd.DataFrame([[path, texto_exp]], columns=["filename", "text"])
 
     return df
