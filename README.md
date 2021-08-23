@@ -1,7 +1,5 @@
 # Hackathon RIIAA 2021 "JusticIA para los desaparecidos"
 
-# Titulo de su proyecto
-
 **Nombre del equipo**  
 `<inserte nombre>`
 
@@ -59,6 +57,7 @@ Para instalar la librería en ambiente virtual, utilizar (ya esta en las instruc
 
 
 ## Referencias
+
 - All Binarize module was obtained from [Gallego 2019](https://github.com/ajgallego/document-image-binarization) 
 - AGUAYO, Sergio, 1968. Los archivos de la violencia. México: Grijalbo, 1998.
 - AGUAYO, Sergio, La charola. Una historia de los servicios de inteligencia en México. México: Grijalbo, 2001.
