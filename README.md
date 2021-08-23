@@ -27,6 +27,8 @@ por el Estado Mexicano entre los años 1964 y 1985.
 Ejecutar el notebook que se encuentra en el folder `notebooks`, llamado **`pipeline.ipynb**. 
 Es recomendado utilizar [Google Colab](https://colab.research.google.com) para su ejecución, con GPU.
 
+La salida serán 2 .csv nombrados: `reto_2a.csv` y `reto_2b.csv`; el path se especifíca dentro del notebook.
+
 
 ## Notas
 ### Requisitos en sistema:
