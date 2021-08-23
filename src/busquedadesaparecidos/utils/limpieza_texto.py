@@ -1,4 +1,8 @@
 import re
+
+import nltk
+nltk.download('punkt')
+
 from nltk.tokenize import word_tokenize
 
 from busquedadesaparecidos.utils.constantes import STOPWORDS_PROPIOS
