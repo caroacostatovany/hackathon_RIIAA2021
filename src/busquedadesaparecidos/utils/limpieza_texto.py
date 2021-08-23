@@ -1,4 +1,6 @@
 import re
+from nltk.tokenize import word_tokenize
+
 from busquedadesaparecidos.utils.constantes import STOPWORDS_PROPIOS
 
 clases = ['organizacion', 'persona', 'lugar', 'fecha']
