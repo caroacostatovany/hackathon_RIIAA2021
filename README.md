@@ -26,8 +26,9 @@ por el Estado Mexicano entre los años 1964 y 1985.
 ![Pipeline](./imagenes/pipeline.png "Pipeline")
 
 ## Cómo correr el código
-Ejecutar el notebook que se encuentra en el folder `notebooks`, llamado pipeline.ipynb. 
-Es recomendado utilizar [Google Colab](https://colab.research.google.com) para su ejecución.
+Ejecutar el notebook que se encuentra en el folder `notebooks`, llamado **`pipeline.ipynb**. 
+Es recomendado utilizar [Google Colab](https://colab.research.google.com) para su ejecución, con GPU.
+
 
 ## Notas
 ### Requisitos en sistema:
@@ -39,6 +40,23 @@ Es recomendado utilizar [Google Colab](https://colab.research.google.com) para s
 > libleptonica-dev tesseract-ocr libtesseract-dev
 
 ## Estructura del proyecto
+
+```
++ binarize (módulo para procesar la imagen obtenido de Gallego 2019. Ver Referencia 1)
++ imagenes
++ notebooks
+    + pipeline.ipynb (Notebook con pipeline desde la lectura de la imagen original hasta el output esperado de reconocimiento de entidades)
++ src
+    + busquedadesaparecidos 
+        + ner (módulo para buscar el no. de expediente y reconocer entidades con spacy)
+        + ocr (módulo para procesar imagen y extraer texto)
+        + utils (módulo general y limpieza de texto)
++ requirements.txt
+```
+
+Para instalar la librería en ambiente virtual, utilizar (ya esta en las instrucciones del notebook):
+> pip install "git+https://github.com/caroacostatovany/hackathon_RIIAA2021.git#egg=busquedadesaparecidos&subdirectory=src"
+
 
 ## Referencias
 - All Binarize module was obtained from [Gallego 2019](https://github.com/ajgallego/document-image-binarization) 
