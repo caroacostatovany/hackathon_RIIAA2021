@@ -19,6 +19,8 @@ clasificar el texto como: persona (víctima o funcionario), organizaciones, luga
 La finalidad de este clasificador es esclarecer el paradero de personas desaparecidas de manera forzada 
 por el Estado Mexicano entre los años 1964 y 1985.
 
+## Video descriptivo (Pitch)
+Para conocer más sobre nuestro trabajo puedes ver este [video](https://youtu.be/lEGyXdu5zrQ ) .
 
 ## Pipeline
 ![Pipeline](./imagenes/pipeline.png "Pipeline")
@@ -59,6 +61,7 @@ existentes en la lista que se dispuso previamente y fue dada en el drive del "Ha
 
 Para instalar la librería en ambiente virtual, utilizar (ya esta en las instrucciones del notebook):
 > pip install "git+https://github.com/caroacostatovany/hackathon_RIIAA2021.git#egg=busquedadesaparecidos&subdirectory=src"
+
 
 
 ## Referencias
