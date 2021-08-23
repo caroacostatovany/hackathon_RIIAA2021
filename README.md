@@ -27,7 +27,10 @@ por el Estado Mexicano entre los años 1964 y 1985.
 Ejecutar el notebook que se encuentra en el folder `notebooks`, llamado **`pipeline.ipynb**. 
 Es recomendado utilizar [Google Colab](https://colab.research.google.com) para su ejecución, con GPU.
 
-La salida serán 2 .csv nombrados: `reto_2a.csv` y `reto_2b.csv`; el path se especifíca dentro del notebook.
+La salida de evaluación serán 2 .csv nombrados: `reto_2a.csv` y `reto_2b.csv`; el path se especifíca dentro del notebook.
+Existe un tercer .csv nombrado `similitud.csv` que nos ayudará a encontrar similitud de organizaciones, nombres o estados
+existentes en la lista que se dispuso previamente y fue dada en el drive del "Hackathon RIIAA 2021: Justicia para los desaparecidos."
+
 
 
 ## Notas
